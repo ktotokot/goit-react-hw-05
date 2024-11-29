@@ -3,10 +3,10 @@ import { NavLink, Outlet } from "react-router-dom";
 const MovieDetailsPage = () => {
   return (
     <div>
-      <p>MovieDetailsPageMovieDetailsPage</p>
+      <p>MovieDetailsPage</p>
       <nav>
-        <NavLink to="MovieCast">MovieCast</NavLink>
-        <NavLink to="MovieReviews">MovieReviews</NavLink>
+        <NavLink to="cast">MovieCast</NavLink>
+        <NavLink to="reviews">MovieReviews</NavLink>
       </nav>
       <Outlet />
     </div>

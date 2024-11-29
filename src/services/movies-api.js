@@ -8,9 +8,14 @@ axios.defaults.params = {
   include_adult: false,
 };
 
-const fetchMovies = async () => {
+export const fetchMovies = async () => {
   const { data } = await axios.get("/trending/movie/day");
+
   return data.results;
 };
 
-export default fetchMovies;
+export const fetchMoviesByQuery = async (query) => {
+  const { data } = await axios.get("/${query}");
+
+  return data.results;
+};
