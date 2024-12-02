@@ -10,12 +10,16 @@ axios.defaults.params = {
 
 export const fetchMovies = async () => {
   const { data } = await axios.get("/trending/movie/day");
-
   return data.results;
 };
 
-export const fetchMoviesByQuery = async (query) => {
-  const { data } = await axios.get("/${query}");
-
-  return data.results;
+export const fetchMovie = async (id) => {
+  const { data } = await axios.get(`/movie/${id}`);
+  return data;
 };
+
+// export const fetchMoviesByQuery = async (query) => {
+//   const { data } = await axios.get("/${query}");
+
+//   return data.results;
+// };

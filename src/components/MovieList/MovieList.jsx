@@ -1,25 +1,14 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { fetchMovies } from "../../services/movies-api";
+import { Link, useLocation } from "react-router-dom";
 
-const MovieList = () => {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      const data = await fetchMovies();
-      setMovies(data);
-    };
-    getData();
-  }, []);
-
+const MovieList = ({ movies }) => {
+  const location = useLocation();
   return (
     <div>
       <h1>MovieList</h1>
       <ul>
         {movies.map((movie) => (
           <li key={movie.id}>
-            <Link to={movie.id.toString()}>
+            <Link to={`/movies/${movie.id}`} state={location}>
               <p>{movie.title}</p>
             </Link>
           </li>

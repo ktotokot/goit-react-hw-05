@@ -1,0 +1,29 @@
+.moviesCard {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.movieImg {
+  width: 250px;
+}
+
+.moviesInfo {
+  display: flex;
+  flex-direction: column;
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+}
+
+.castReviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+}
