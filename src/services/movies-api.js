@@ -27,8 +27,7 @@ export const fetchCast = async (id) => {
   return data.cast;
 };
 
-// export const fetchMoviesByQuery = async (query) => {
-//   const { data } = await axios.get("/${query}");
-
-//   return data.results;
-// };
+export const fetchMoviesByQuery = async (query) => {
+  const { data } = await axios.get(`search/movie`, { params: { query } });
+  return data;
+};

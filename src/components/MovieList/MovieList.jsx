@@ -4,7 +4,6 @@ const MovieList = ({ movies }) => {
   const location = useLocation();
   return (
     <div>
-      <h1>MovieList</h1>
       <ul>
         {movies.map((movie) => (
           <li key={movie.id}>
